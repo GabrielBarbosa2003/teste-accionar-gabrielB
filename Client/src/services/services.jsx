@@ -1,16 +1,16 @@
 import axios from "axios";
 
-async function pegaDadosCnab() {
+const axiosCNABData = async () => {
     try {
-        let url = 'http://localhost:5000/api/v1/transactions/getTransactions'
-        const response = await axios.get(url)
-        return response;
+      const response = await axios.get('http://localhost:5000/api/v1/transactions/getTransactions');
+      const transacoes = response.data.obj;
+      return transacoes;
+
     } catch (error) {
-        console.log(error);
-        return null; // Retorne null em caso de erro
+      console.error('Erro ao obter os dados CNAB:', error.message);
     }
-}
+  };
 
 export {
-    pegaDadosCnab
+    axiosCNABData
 }
