@@ -2,8 +2,6 @@ import { format } from 'date-fns';
 import { pt } from 'date-fns/locale';
 
 const tipoTransacao = (pagamento) => {
-    //Tipo de Transação
-
     switch (pagamento) {
         case "1":
             return 'Débito';
