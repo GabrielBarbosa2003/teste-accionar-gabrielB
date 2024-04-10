@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from 'react';
-import { tipoTransacao, formataData } from './tools/tools.jsx'
+import { tipoTransacao, formataData, formataValorTransacao} from './tools/tools.jsx'
 
 import './App.css'
 function App() { 
@@ -67,22 +67,19 @@ function App() {
               Data da Ocorrência:{formataData(trans.data)}
               </li>
               <li>
-              Valor da Transação:
+              Valor da Transação:{formataValorTransacao(trans.valor)}
               </li>
               <li>
-              Data da Ocorrência:
+              CPF:{trans.cpf}
               </li>
               <li>
-              CPF:
+              Número do Cartão:{trans.cartao}
               </li>
               <li>
-              Número do Cartão:
+              Dono da Loja:{trans.dono}
               </li>
               <li>
-              Dono da Loja:
-              </li>
-              <li>
-              Nome da Loja:
+              Nome da Loja:{trans.loja}
               </li>
 
             </div>

@@ -19,26 +19,33 @@ const tipoTransacao = (pagamento) => {
 }
 
 const formataData = (data) => {
-    console.log(data)
     const ano = data.substring(0, 4);
     const mes = data.substring(4, 6);
     const dia = data.substring(6, 8);
 
-    const dateObj = new Date(`${ano}-${mes}-${dia}`);
+    const dataObj = new Date(`${ano}-${mes}-${dia}`);
 
-    if(dateObj == "Invalid Date"){
+    if(dataObj == "Invalid Date"){
         return "Data Inválida"
     }else{
-        const formattedDate = format(dateObj, 'dd MMMM yyyy', { locale: pt });
-        return formattedDate
+        const dataFormatada = format(dataObj, 'dd MMMM yyyy', { locale: pt });
+        return dataFormatada
     }
 
-    
-  
-    
 }
+
+const formataValorTransacao = (valorTransacao) => {
+    const valorFloat= parseFloat(valorTransacao) / 100;
+
+    const valorReais = valorFloat.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+  
+    return valorReais;
+}
+
+ 
 
 export{
     tipoTransacao,
-    formataData
+    formataData,
+    formataValorTransacao
 }
