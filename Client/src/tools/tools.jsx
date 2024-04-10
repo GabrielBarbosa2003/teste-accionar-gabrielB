@@ -1,4 +1,5 @@
-import dateFormat from 'dateformat';
+import { format } from 'date-fns';
+import { pt } from 'date-fns/locale';
 
 const tipoTransacao = (pagamento) => {
     //Tipo de Transação
@@ -18,7 +19,23 @@ const tipoTransacao = (pagamento) => {
 }
 
 const formataData = (data) => {
-    dateFormat("2019-04-30T08:59:00.000Z", "mmmm dS, yyyy")
+    console.log(data)
+    const ano = data.substring(0, 4);
+    const mes = data.substring(4, 6);
+    const dia = data.substring(6, 8);
+
+    const dateObj = new Date(`${ano}-${mes}-${dia}`);
+
+    if(dateObj == "Invalid Date"){
+        return "Data Inválida"
+    }else{
+        const formattedDate = format(dateObj, 'dd MMMM yyyy', { locale: pt });
+        return formattedDate
+    }
+
+    
+  
+    
 }
 
 export{
