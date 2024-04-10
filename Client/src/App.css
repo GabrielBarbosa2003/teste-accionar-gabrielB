@@ -2,19 +2,31 @@
     display: flex;
     flex-direction: column;
     padding-top: 20px;
+    width: 100%;
+    max-width: 86rem;
+    margin: 0 auto;
+    padding: 0px 15px;
 }
+
 .container .transacoes{
     padding-top: 20px;
+    margin-top: 10px;
+    border: 2px black solid;
+    padding: 20px;
 }
 
 .container .transacoes h2{
     font-size: 20px;
+    color:#d9d9d9;
     
 }
 .container .transacoes span{
     color: burlywood; 
     padding-left: 10px;
 }
-.formulario{
+.formulario li{
     font-size: 20px;
+    color: aliceblue;
+    padding-top: 5px;
+   
 }

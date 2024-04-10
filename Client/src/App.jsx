@@ -51,8 +51,8 @@ function App() {
 
   return (
     <>
-    <h1>Teste Técnico</h1>
     <div className="container">
+    <h1>Teste Técnico - Gabriel Barbosa</h1>
     {
       tipo.map((trans) =>{
         
@@ -61,25 +61,25 @@ function App() {
             <h2>CNAB:<span>{trans.cnab}</span></h2>
             <div className="formulario">
               <li>
-              Tipo de Transação:{tipoTransacao(trans.tipo)}
+              Tipo de Transação: {tipoTransacao(trans.tipo)}
               </li>
               <li>
-              Data da Ocorrência:{formataData(trans.data)}
+              Data da Ocorrência: {formataData(trans.data)}
               </li>
               <li>
-              Valor da Transação:{formataValorTransacao(trans.valor)}
+              Valor da Transação: {formataValorTransacao(trans.valor)}
               </li>
               <li>
-              CPF:{trans.cpf}
+              CPF: {trans.cpf}
               </li>
               <li>
-              Número do Cartão:{trans.cartao}
+              Número do Cartão: {trans.cartao}
               </li>
               <li>
-              Dono da Loja:{trans.dono}
+              Dono da Loja: {trans.dono}
               </li>
               <li>
-              Nome da Loja:{trans.loja}
+              Nome da Loja: {trans.loja}
               </li>
 
             </div>
